@@ -1,0 +1,45 @@
+1. Component Lifecycle
+Trong Angular, Component Lifecycle (vòng đời của thành phần) là một chuỗi các sự kiện và pha khác nhau 
+xảy ra trong quá trình một thành phần được tạo ra, cập nhật, và sau đó bị hủy. 
+Hiểu rõ vòng đời của thành phần rất quan trọng để quản lý và tương tác với thành phần một cách hiệu quả. 
+Vòng đời của thành phần Angular bao gồm các pha sau:
+
+ngOnChanges: Pha này xảy ra khi các input properties của thành phần thay đổi. 
+Nó cho phép bạn xác định xem có thay đổi trong giá trị các input properties hay không và thực hiện các hành động phản ứng tương ứng.
+
+ngOnInit: Trong pha này, thành phần đã được tạo và các input properties đã được thiết lập. 
+Đây là nơi bạn thực hiện các tác vụ khởi tạo, ví dụ như tải dữ liệu từ máy chủ hoặc khởi tạo các biến.
+
+ngDoCheck: Pha này xảy ra sau khi ngOnChanges và ngOnInit. 
+Nó cho phép bạn kiểm tra thay đổi trong dữ liệu và thực hiện các hành động dựa trên sự kiện này. 
+Pha ngDoCheck được gọi mỗi lần Angular chạy một vòng kiểm tra (change detection).
+
+ngAfterContentInit: Sau khi Angular đã kiểm tra và cập nhật nội dung (content) của thành phần 
+(ví dụ, nếu bạn có các thẻ con bên trong thành phần), pha này được gọi. 
+Nó là nơi tốt để thực hiện các tác vụ liên quan đến nội dung.
+
+ngAfterContentChecked: Pha này xảy ra sau khi nội dung đã được kiểm tra. 
+Đây là nơi bạn kiểm tra và thực hiện các tác vụ sau khi nội dung đã được kiểm tra.
+
+ngAfterViewInit: Khi view của thành phần đã được khởi tạo, pha này được gọi. 
+Điều này cho phép bạn thực hiện các tác vụ sau khi view của thành phần đã sẵn sàng.
+
+ngAfterViewChecked: Pha này xảy ra sau khi view của thành phần đã được kiểm tra. 
+Nó là nơi bạn kiểm tra và thực hiện các tác vụ sau khi view đã được kiểm tra.
+
+ngOnDestroy: Pha này xảy ra khi thành phần sẽ bị hủy. 
+Nó cho phép bạn thực hiện các tác vụ dọn dẹp, hủy đăng ký sự kiện, hoặc giải phóng bất kỳ tài nguyên nào mà thành phần đã sử dụng.
+
+================================================================================================
+
+tóm lại. ViewChild là đứng từ compent con có thể code để thay đổi compenent cha.
+contentChild là đứng từ component cha có thể code để thay đổi được component con
+
+ChatGPT
+Đúng, bạn đã tóm tắt chính xác về cách @ViewChild và @ContentChild hoạt động:
+
+@ViewChild: Được sử dụng từ thành phần con để truy cập và tương tác với các phần tử hoặc thành phần con bên trong thành phần cha. Thành phần con có quyền truy cập và tương tác với thành phần cha.
+
+@ContentChild: Được sử dụng từ thành phần cha để truy cập và tương tác với các phần tử hoặc thành phần con được chèn vào nội dung của thành phần cha thông qua content projection. Thành phần cha có quyền truy cập và tương tác với nội dung của thành phần con.
+
+================================================================================================

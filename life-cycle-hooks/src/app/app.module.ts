@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ComponentOverviewByCliComponent } from './component-overview-by-cli/component-overview-by-cli.component';
-import { ComponentManuallyComponent } from './component-manually/component-manually';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
-    AppComponent
-    , ComponentOverviewByCliComponent
-    , ComponentManuallyComponent
+    AppComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,13 @@
+<p>parent works!</p>
+<button (click)="updateUser()"> Update</button>
+
+<button (click)="destroy()"> Destroy</button>
+<br />
+<br />
+
+<app-child [userName]="userName" *ngIf="!isChildDestroyed">
+  <div #kienWrapper>foo</div>
+
+</app-child>
+
+<div *ngIf="isChildDestroyed">abcd</div>
