@@ -1,0 +1,5 @@
+<p>item-out works!</p>
+
+<label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addItemNew(newItem.value)">Add to parent's list</button>

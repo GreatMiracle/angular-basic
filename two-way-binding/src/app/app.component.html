@@ -1,0 +1,23 @@
+<h1 id="two-way">Two-way Binding</h1>
+<!-- <div id="two-way-1">
+  <app-sizer [(size)]="fontSizePx"></app-sizer>
+  <div [style.font-size.px]="fontSizePx">Resizable Text</div>
+  <label for="font-size">FontSize (px): <input id="font-size" [(ngModel)]="fontSizePx"></label>
+</div> -->
+<br>
+<div id="two-way-2">
+  <h2>De-sugared two-way binding</h2>
+  <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+</div>
+
+
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+
+<!-- <p *appUnless="condition" class="unless a">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless b">
+  (B) Although the condition is true,
+  this paragraph is displayed because appUnless is set to false.
+</p> -->

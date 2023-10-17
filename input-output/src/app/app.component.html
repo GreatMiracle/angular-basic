@@ -1,0 +1,17 @@
+<p> rooot</p>
+
+
+<app-item-detail [item]="title"> </app-item-detail>
+<hr>
+
+<app-item-out (newItemEvent)="kienAddItem($event)"></app-item-out>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+
+<hr>
+<app-in-out [item]="title" (deleteRequest)="crossOffItem($event)">
+</app-in-out>
+
+<p> rooot</p>
